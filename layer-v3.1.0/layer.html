@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web弹窗</title>
+    <style>
+        html {
+            background-color: #E3E3E3;
+            font-size: .875rem;
+            color: #000;
+            font-family: '微软雅黑'
+        }
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+        pre {
+            font-family: '微软雅黑'
+        }
+        .box {
+            padding: 1.25rem;
+            background-color: #fff;
+            margin: 3.125rem 6.25rem;
+            border-radius: .3125rem;
+        }
+        .box a {
+            padding-right: .9375rem;
+        }
+        #about_hide {
+            display: none
+        }
+        .layer_text {
+            background-color: #fff;
+            padding: 1.25rem;
+        }
+        .layer_text p {
+            margin-bottom: .625rem;
+            text-indent: 2em;
+            line-height: 1.4375rem;
+        }
+        .button {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            line-height: 1.875rem;
+            padding: 0 1.25rem;
+            background-color: #56B4DC;
+            color: #fff;
+            font-size: .875rem;
+            border-radius: .1875rem;
+            cursor: pointer;
+            font-weight: normal;
+        }
+        .photos-demo img {
+            width: 12.5rem;
+        }
+    </style>
+    <script src="./jquery-1.12.1.min.js"></script>
+    <script src="layer/layer.js"></script>
+</head>
+
+<body>
+
+    <input id="btn" type="button" value="点击">
+    <script>
+        //页面一打开就执行，放入ready是为了layer所需配件（css、扩展模块）加载完毕
+        function test() {
+            layer.ready(function() {
+                layer.open({
+                    type: 2,
+                    title: '欢迎页',
+                    maxmin: true,
+                    area: ['18.75rem', '31.25rem'],
+                    content: 'https://www.baidu.com/',
+                });
+            });
+        }
+        $('#btn').click(function() {
+            test();
+        })
+    </script>
+</body>
+
+</html>

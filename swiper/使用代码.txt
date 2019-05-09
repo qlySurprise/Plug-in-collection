@@ -1,0 +1,43 @@
+//ÒýÈë
+<script type='text/javascript' src='/js/swiper.js' charset='utf-8'></script>
+
+//Í¼Æ¬
+
+<div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide"><img src="/images/C80banner.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/images/banner.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/images/C90banner.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/images/B80banner.jpg" alt=""></div>
+
+
+        </div>
+      <div class="swiper-pagination"></div>
+</div>
+
+/*ÂÖ²¥Í¼*/
+
+
+    var swiper = new Swiper('.swiper-container',{
+        effect : 'coverflow',
+        autoplay: {
+           delay: 2500,
+           disableOnInteraction: false,
+      },
+        loop : true,
+        cubeEffect: {
+            slideShadows: true,
+            shadow: true,
+            shadowOffset: 100,
+            shadowScale: 0.6
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
